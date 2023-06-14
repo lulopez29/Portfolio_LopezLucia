@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;900&family=Asul&family=Montserrat:wght@200;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+}
+
+nav {
+    color: rgb(0, 0, 0);
+    width: 100vw;
+    height: 18.83vh;
+    background-color: #eae15a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mostrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    left: 0;
+    top: 19vh;
+    background-color: black;
+    width: 100vw;
+    padding: 2vw;
+    min-height: 30vh;
+}
+
+nav div {
+    display: flex;
+    width: 24.11%;
+    justify-content: space-between;
+}
+
+
+
+nav,
+header,
+main {
+    width: 100vw;
+    padding: 0 8.33vw;
+}
+
+section { 
+    width: 100%;
+    display: flex;
+   justify-content: space-between;
+   flex-wrap:wrap;
+   align-content: space-around;
+   /*manejar el espacio entre las filas de elementos con flex*/
+   height: 100vh;
+}
+
+main div {
+    width: 45.83%;
+}
+
+div img, video {
+width: 100%;
+}
+
+p {
+    margin: 10px;
+    font-size: 60px;
+}
+
+header {
+    height: 45.30vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 60px;
+}
+
+h1,
+header h3,
+nav a,
+header a {
+    line-height: 125%;
+}
+
+nav h1 {
+    font-weight: 500;
+}
+
+header h1 { 
+    color: #adbbfc;
+    font-family: 'Asul', sans-serif;
+}
+
+header h3 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    color: #f1409c;
+    letter-spacing: 1px;
+    font-size: 15px;
+
+}
+
+header p {
+    font-size: 14px;
+    margin: 10;
+    color: #fffcfe;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+header a,
+nav a {
+    text-transform: capitalize;
+    margin: 10px;
+    font-family: 'Asul', sans-serif;
+    color: #f1409c;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+a:hover {
+    color: #adbbfc;
+}
+
+
+.logo {
+    width: 150px;
+    height: 150px;
+    background-image: url('path/to/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: rotate 5s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+header a {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(0, 0, 0);
+    background-color: #eae15a;
+
+}
+
+nav span {
+    display: none;
+}
+
+/*oculto en la generalidad el menú hamburguesa*/
+
+.icon-menu::before {
+
+    color: rgb(0, 0, 0);
+    font-size: 4vw;
+}
+
+span.icon-menu:hover {
+    cursor: pointer;
+}
+
+
+.lightboxOverlay { background-color: rgb(232, 215, 94);
+}
+
+@media(max-width: 1024px) {
+  
+    nav div {
+        width: 50%;
+    }
+
+    header, section { 
+        margin-bottom: 20px;
+        height: auto;}
+
+}
+
+
+@media (max-width: 768px) {
+
+    nav div {
+        display: none;
+    }
+
+    /*desaparece el grupo de links*/
+
+    nav span {
+        display: inline;
+    }
+
+    section div {
+    width: 100%;
+    margin-bottom: 2vh;
+    }
+
+    /*vuelvo a mostrar el menú hamburguesa*/
+
+}
